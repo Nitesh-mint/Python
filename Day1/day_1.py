@@ -5,7 +5,7 @@
     check balance
 2) what we need to create a simple account:
     customer name
-    passsowrd
+    passsword
     balance'''
 
 #single account without functions
