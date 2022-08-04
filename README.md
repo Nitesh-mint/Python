@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/84650411/182748007-230539c7-983a-49b2-91b6-2645a8b39f05.png)
+![image](https://user-images.githubusercontent.com/84650411/182748184-846dd7da-a71a-46ab-a9ba-f54e3eaee6cb.png)
 # OOP_in_python
 I am learning OOP in python and these are the things i learn during sessions.
 
