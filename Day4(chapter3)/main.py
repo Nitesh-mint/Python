@@ -26,7 +26,7 @@ class Account():
             print("Sorry the password is incorrect")
             return None
         if wAmount < 0 :
-            print("Cannot withdraw negativ balance.")
+            print("Cannot withdraw negative balance.")
             return None
         if wAmount > self.balance:
             print("Cannot withdraw amount more than on your account")
