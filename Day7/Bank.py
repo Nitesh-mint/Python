@@ -27,7 +27,7 @@ class Bank():
         userAccountNumber = int(input("Please enter your account number: "))
         userPassword = input("Enter the password: ")
         oAccount = self.accountsDict[userAccountNumber]
-        theBalance = oAccount.getBalance(userPassword)
+        theBalance = oAccount.getbalance(userPassword)
         if  theBalance is not None:
             print("You had", theBalance, "in your acount, which is being returned to you.")
             del self.accountsDict[userAccountNumber]
