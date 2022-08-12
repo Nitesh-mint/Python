@@ -14,7 +14,7 @@ window = pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
 #load asset
-dogImage = pygame.image.load('/home/nitesh/Desktop/OOP_in_python/Day10/dog.jpg')
+dogImage = pygame.image.load("/home/nitesh/Desktop/OOP_in_python/10_Day/dog.jpg")
 
 #draw the window element
 #draw ball at position 100 across (x) and 200 downn (y)
