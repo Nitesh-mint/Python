@@ -1,1 +1,0 @@
-/home/nitesh/Desktop/OOP_in_python/10_Day/dog.jpg
