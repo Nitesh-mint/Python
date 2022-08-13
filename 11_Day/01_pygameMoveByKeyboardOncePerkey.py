@@ -4,15 +4,15 @@ import sys
 import random
 
 #define constants
-BLACK = (0,0,0)
-WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1080
+WHITE = (255,255,255)
+WINDOW_WIDTH = 600
+WINDOW_HEIGHT = 400
 FRAMES_PER_SECOND= 30
 BALL_WIDTH_HEIGHT = 100
 MAX_WIDTH = WINDOW_WIDTH - BALL_WIDTH_HEIGHT
 MAX_HEIGHT = WINDOW_HEIGHT - BALL_WIDTH_HEIGHT
-TARGET_X = 400
-TARGET_Y = 320
+TARGET_X = 100
+TARGET_Y = 100
 TARGET_WIDTH_HEIGHT = 120
 N_PIXELS_TO_MOVE = 20
 
@@ -22,7 +22,7 @@ window = pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
 #load assets
-ballImage = pygame.image.load("/home/nitesh/Desktop/OOP_in_python/11_Day/ball.jpg")
+ballImage = pygame.image.load("/home/nitesh/Desktop/OOP_in_python/11_Day/ball.png")
 targetImage = pygame.image.load("/home/nitesh/Desktop/OOP_in_python/11_Day/target.jpg")
 
 #initialize variables 
@@ -55,7 +55,7 @@ while True:
         print("The ball is thouchng the target.")
 
     #clear the window
-    window.fill(BLACK)
+    window.fill(WHITE)
 
     #draw the window elements
     window.blit(targetImage,(TARGET_X,TARGET_Y)) #DRAW THE TARGET
