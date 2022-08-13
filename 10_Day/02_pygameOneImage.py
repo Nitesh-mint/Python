@@ -2,9 +2,10 @@ import pygame
 from pygame.locals import *
 import sys
 
-#define constants
-WINDOW_WIDTH = 1920
-WINDOW_HEIGHT = 1080
+#define constants\
+WHITE = (255,255,255)
+WINDOW_WIDTH = 500
+WINDOW_HEIGHT = 400
 FRAMES_PER_SECOND = 30
 
 
@@ -14,7 +15,7 @@ window = pygame.display.set_mode((WINDOW_WIDTH,WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
 #load asset
-dogImage = pygame.image.load("/home/nitesh/Desktop/OOP_in_python/10_Day/dog.jpg")
+ballImage = pygame.image.load("/home/nitesh/Desktop/OOP_in_python/10_Day/ball.png")
 
 #draw the window element
 #draw ball at position 100 across (x) and 200 downn (y)
@@ -26,8 +27,10 @@ while True:
             pygame.quit()
             sys.exit()
 
-    window.blit(dogImage,(0,0))
+    window.blit(ballImage,(170,150))
 
     pygame.display.update()
+
+    window.fill(WHITE)
 
     clock.tick(FRAMES_PER_SECOND)
