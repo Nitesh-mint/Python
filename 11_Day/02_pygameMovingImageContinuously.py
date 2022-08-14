@@ -15,7 +15,7 @@ TARGET_Y = 20 #Y-ordinate of the targetImage below
 TARGET_WIDTH=100
 TARGET_HEIGHT = 100
 N_PIXELS_TO_MOVE = 5
-FRAMES_PER_SECOND = 60
+FRAMES_PER_SECOND = 30
 
 #initialize the world
 pygame.init()
@@ -33,36 +33,36 @@ targetRect = pygame.Rect(TARGET_X,TARGET_Y,TARGET_WIDTH,TARGET_HEIGHT)
 
 #LOop
 while True:
-     for event in pygame.event.get():
+    for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+    #it should be outside of the for loop   
+    keyPressedTuple = pygame.key.get_pressed() 
+
+    if keyPressedTuple[pygame.K_LEFT]:
+        javaX = javaX - N_PIXELS_TO_MOVE
+    if keyPressedTuple[pygame.K_RIGHT]:
+        javaX = javaX + N_PIXELS_TO_MOVE
+    if keyPressedTuple[pygame.K_UP]:
+        javaY = javaY - N_PIXELS_TO_MOVE
+    if keyPressedTuple[pygame.K_DOWN]:
+        javaY = javaY + N_PIXELS_TO_MOVE
         
-        keyPressedTuple = pygame.key.get_pressed()
+    #check if the java touches the target?
+    javaRect = pygame.Rect(javaX,javaY,JAVA_WIDTH_HEIGHT,JAVA_WIDTH_HEIGHT)
 
-        if keyPressedTuple[pygame.K_LEFT]:
-            javaX = javaX - N_PIXELS_TO_MOVE
-        if keyPressedTuple[pygame.K_RIGHT]:
-            javaX = javaX + N_PIXELS_TO_MOVE
-        if keyPressedTuple[pygame.K_UP]:
-            javaY = javaY - N_PIXELS_TO_MOVE
-        if keyPressedTuple[pygame.K_DOWN]:
-            javaY = javaY + N_PIXELS_TO_MOVE
-        
-        #check if the java touches the target?
-        javaRect = pygame.Rect(javaX,javaY,JAVA_WIDTH_HEIGHT,JAVA_WIDTH_HEIGHT)
+    if javaRect.colliderect(targetRect): #checks the if the java touches it.
+        print("Java is touching the target.")
 
-        if javaRect.colliderect(targetRect): #checks the if the java touches it.
-            print("Java is touching the target.")
+    window.fill(WHITE)
 
-        window.fill(WHITE)
+    #draw the java and target
+    window.blit(javaImage,(javaX,javaY))
+    window.blit(targetImage,(TARGET_X,TARGET_Y))
 
-        #draw the java and target
-        window.blit(javaImage,(javaX,javaY))
-        window.blit(targetImage,(TARGET_X,TARGET_Y))
+    #UPDATE THE WINDOW
+    pygame.display.update()
 
-        #UPDATE THE WINDOW
-        pygame.display.update()
-
-        #frames
-        clock.tick(FRAMES_PER_SECOND)
+    #frames
+    clock.tick(FRAMES_PER_SECOND)
