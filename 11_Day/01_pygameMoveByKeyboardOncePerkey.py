@@ -30,7 +30,7 @@ ballX = random.randrange(MAX_WIDTH)
 ballY = random.randrange(MAX_HEIGHT)
 targetRect = pygame.Rect(TARGET_X,TARGET_Y,TARGET_WIDTH_HEIGHT,TARGET_WIDTH_HEIGHT)
 
-#loop
+#loop forever
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
