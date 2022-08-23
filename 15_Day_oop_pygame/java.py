@@ -27,9 +27,9 @@ class Java():
     
     def update(self):
         #check for java if it hits the corner or not
-        if(self.x < 0) and (self.x >=self.max_width):
+        if(self.x < 0) or (self.x >=self.max_width):
             self.xSpeed = -self.xSpeed
-        if(self.y < 0) and (self.y >=self.max_height):
+        if(self.y < 0) or (self.y >=self.max_height):
             self.ySpeed = -self.ySpeed
             
         #update the java's x and y in both direction
