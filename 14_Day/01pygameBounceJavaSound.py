@@ -38,7 +38,7 @@ while True:
             sys.exit()
     #do any frame action
     if (javaX < 0) or (javaX >= MAX_WIDTH):
-        xSpeed = -xSpeed #reverse X direction\
+        xSpeed = -xSpeed #reverse X direction
         bounceSound.play()
     if (javaY < 0) or (javaY >= MAX_WIDTH):
         ySpeed = -ySpeed #reverse Y direction

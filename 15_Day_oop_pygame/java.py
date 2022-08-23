@@ -6,14 +6,14 @@ class Java():
     def __init__(self,window,window_width,window_height):
         self.window = window #for drawing the window later.
         self.window_width = window_width
-        self.widnow_height =  window_height
+        self.window_height =  window_height
         self.image = pygame.image.load("/home/nitesh/Desktop/OOP_in_python/13_Day/java.png")
         #a rect is made up of [x,y, width and height]
         javaRect = self.image.get_rect()
         self.width = javaRect.width
         self.height = javaRect.height
-        self.max_width = window_width - self.width
-        self.max_height = window_height - self.height
+        self.max_width =window_width - self.width
+        self.max_height =window_height - self.height
 
         #pick a random starting position
         self.x = random.randrange(0,self.max_width)
@@ -31,7 +31,7 @@ class Java():
             self.xSpeed = -self.xSpeed
         if(self.y < 0) and (self.y >=self.max_height):
             self.ySpeed = -self.ySpeed
-        
+            
         #update the java's x and y in both direction
         self.x  = self.x + self.xSpeed
         self.y = self.y + self.ySpeed
