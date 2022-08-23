@@ -1,3 +1,4 @@
+#class to make a Button objects.
 import pygame
 from pygame.locals import *
 

@@ -1,3 +1,4 @@
+#program to make button clicked 
 import pygame
 from pygame.locals import *
 import sys
