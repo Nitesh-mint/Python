@@ -21,8 +21,8 @@ clock = pygame.time.Clock()
 #initialze variables
 oJava = Java(window, WINDOW_WIDTH,WINDOW_HEIGHT)
 oFrameCountLabel = SimpleText(window,(60,20),"Program has to run through this many loops:",BLACK)
-oFrameCountDisplay = SimpleText(window, (500,20),"", WHITE)
-oRestartButton = simpleButton(window, (280,60),"/home/nitesh/Desktop/OOP_in_python/16_Day/clicked.jpg","/home/nitesh/Desktop/OOP_in_python/16_Day/Noclicked.jpg")
+oFrameCountDisplay = SimpleText(window, (250,100),"", BLACK)
+oRestartButton = simpleButton(window, (160,250),"/home/nitesh/Desktop/OOP_in_python/16_Day/clicked.jpg","/home/nitesh/Desktop/OOP_in_python/16_Day/Noclicked.jpg")
 frameCounter = 0
 
 #while Loop
