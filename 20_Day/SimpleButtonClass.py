@@ -8,12 +8,11 @@ class simpleButton():
     STATE_ARMED = "armed" #button is down, mouse mover button
     STATE_DISARMED = "disarmed" #clicked down on button, rolled off
 
-    def __init__(self,window, loc,up,down):
+    def __init__(self,window, loc,up,down,callBack=False):
         self.window = window
         self.loc = loc
         self.surfaceUp = pygame.image.load(up)
         self.surfaceDown = pygame.image.load(down)
-
         #get the rect of the button(used to see if the mouse is over the button?)
         self.rect = self.surfaceUp.get_rect()
         self.rect[0] = loc[0]

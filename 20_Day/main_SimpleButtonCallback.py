@@ -32,10 +32,10 @@ oCallBackTest = callback()
 oButtonA = simpleButton(window,(100,20),"/home/nitesh/Desktop/OOP_in_python/16_Day/clicked.jpg","/home/nitesh/Desktop/OOP_in_python/16_Day/Noclicked.jpg")
 
 #specifing function to callback
-oButtonB = simpleButton(window,(100,20),"/home/nitesh/Desktop/OOP_in_python/16_Day/clicked.jpg","/home/nitesh/Desktop/OOP_in_python/16_Day/Noclicked.jpg", callBack = myCallBackFunction)
+oButtonB = simpleButton(window,(100,90),"/home/nitesh/Desktop/OOP_in_python/16_Day/clicked.jpg","/home/nitesh/Desktop/OOP_in_python/16_Day/Noclicked.jpg", callBack = myCallBackFunction)
 
 #specifing method of the object to callback
-oButtonC = simpleButton(window,(100,20),"/home/nitesh/Desktop/OOP_in_python/16_Day/clicked.jpg","/home/nitesh/Desktop/OOP_in_python/16_Day/Noclicked.jpg", callBack = oCallBackTest.myMethod)
+oButtonC = simpleButton(window,(100,170),"/home/nitesh/Desktop/OOP_in_python/16_Day/clicked.jpg","/home/nitesh/Desktop/OOP_in_python/16_Day/Noclicked.jpg", callBack = oCallBackTest.myMethod)
 
 counter = 0
 
@@ -58,7 +58,7 @@ while True:
         #do any frames per action 
         counter  = counter + 1
 
-        window.fil(WHITE)
+        window.fill(WHITE)
 
         #drew it to the GUI
         oButtonA.draw()
