@@ -9,11 +9,11 @@ BLUE = (0,0,255)
 class square():
     def __init__(self,window,maxWidth,maxHeight):
         self.window = window
-        self.WidthAndHeight = random.randrange(10,100)
-        self.color  = random.choice(RED,GREEN,BLUE)
+        self.widthAndHeight = random.randrange(10,100)
+        self.color  = random.choice((RED,GREEN,BLUE))
         self.x = random.randrange(1,maxWidth - 100)
         self.y = random.randrange(1,maxHeight  - 100)
-        self.rect = pygame.Rect(self.x,self.y,self.WidthAndHeight,self.widthAndHeight)
+        self.rect = pygame.Rect(self.x,self.y,self.widthAndHeight,self.widthAndHeight)
         self.shapeType = "square"
     
     def clikedInside(self,mousePoint):
@@ -27,4 +27,4 @@ class square():
         theArea = self.WidthAndHeight * self.WidthAndHeight
     
     def draw(self):
-        pygame.draw.rect(self.window,self.color,self.x,self.y,(self.WidthAndHeight,self.WidthAndHeight))
+        pygame.draw.rect(self.window,self.color,(self.x,self.y,self.widthAndHeight,self.widthAndHeight))

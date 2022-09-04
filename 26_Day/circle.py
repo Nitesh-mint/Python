@@ -10,13 +10,13 @@ BLUE = (0,0,255)
 class Circle():
     def __init__(self,window,maxWidth,maxHeight):
         self.window = window
-        self.color = random.choice(RED,GREEN,BLUE)
+        self.color = random.choice((RED,GREEN,BLUE))
         self.X = random.randrange(1,maxWidth-100)
         self.Y = random.randrange(25,maxHeight-100)
         self.radius = random.randrange(10,50)
         self.centerX = self.X + self.radius
         self.centerY = self.Y + self.radius
-        self.rect = pygame.Rect(self.x,self.Y,self.radius*2,self.raduis*2)
+        self.rect = pygame.Rect(self.X,self.Y,self.radius*2,self.radius*2)
         self.shape = "Circle"
 
     def clickedInside(self,mousePoint):
