@@ -5,7 +5,7 @@ RED = (255,0,0)
 GREEN= (0,255,0)
 BLUE = (0,0,255)
 
-class Rectangle():
+class Rectange():
     def __init__(self,window):
         self.window = window
         self.width = random.choice((20,30,40))
@@ -14,7 +14,7 @@ class Rectangle():
         self.x = random.randrange(0,400)
         self.y = random.randrange(0,400)
         self.rect = pygame.Rect(self.x,self.y,self.width,self.height)
-        self.area = self.widht * self.height
+        self.area = self.width * self.height
 
     def clickedInside(self,mousePoint):
         clicked = self.rect.collidepoint(mousePoint)
@@ -22,7 +22,7 @@ class Rectangle():
     
     #magic method call when you compare two rectangles with == operator.
     def __eq__(self,oOtherRectangle):
-        if not isinstance(oOtherRectangle,Rectangle):
+        if not isinstance(oOtherRectangle,Rectange):
             raise TypeError("Second object was not recatangle.")
         if self.area == oOtherRectangle.area:
             return True
